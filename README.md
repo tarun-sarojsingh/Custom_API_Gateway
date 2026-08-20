@@ -30,7 +30,7 @@ A high-performance, resilient, horizontally scalable API Gateway (Reverse Proxy)
 2. Clone the repository and install dependencies:
    ```bash
    git clone https://github.com/tarun-sarojsingh/Custom_API_Gateway.git
-   cd my-portfolio
+   cd Custom_API_Gateway
    npm install
    ```
 
