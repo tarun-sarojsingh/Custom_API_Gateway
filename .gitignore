@@ -1,0 +1,11 @@
+node_modules/
+dist/
+build/
+*.log
+.env*
+coverage/
+
+# Spec-kit and Agent configuration (Do not push to github)
+.agents/
+.specify/
+specs/

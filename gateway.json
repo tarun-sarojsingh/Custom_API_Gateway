@@ -1,0 +1,41 @@
+{
+  "server": {
+    "port": 8080
+  },
+  "redis": {
+    "address": "localhost:6379",
+    "db": 0
+  },
+  "global_rate_limit": {
+    "requests_per_second": 100,
+    "burst": 20
+  },
+  "clusters": [
+    {
+      "name": "accounts-service",
+      "instances": [
+        "http://localhost:8081"
+      ],
+      "circuit_breaker": {
+        "timeout_ms": 3000,
+        "max_requests": 5,
+        "interval_ms": 10000
+      }
+    }
+  ],
+  "routes": [
+    {
+      "path_prefix": "/accounts",
+      "upstream_cluster": "accounts-service",
+      "auth_required": true,
+      "rateLimit": {
+        "requests_per_second": 50
+      }
+    },
+    {
+      "path_prefix": "/public",
+      "upstream_cluster": "accounts-service",
+      "auth_required": false
+    }
+  ]
+}
