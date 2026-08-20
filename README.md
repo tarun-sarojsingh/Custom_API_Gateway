@@ -29,7 +29,7 @@ A high-performance, resilient, horizontally scalable API Gateway (Reverse Proxy)
 1. Ensure you have Node.js (v18+) and Redis installed.
 2. Clone the repository and install dependencies:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/tarun-sarojsingh/Custom_API_Gateway.git
    cd my-portfolio
    npm install
    ```
